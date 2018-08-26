@@ -6,4 +6,28 @@
 body {
   background-color: #2d3941;
   font-family: 'Anton', sans-serif;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 8em;
+  font-style: normal;
+  font-weight: 200;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  color: #ffffff;
+  text-decoration-line: none;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
