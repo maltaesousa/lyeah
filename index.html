@@ -1,11 +1,14 @@
-<html lang="en">
+<html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="descritpion" content="L-Yeah auto-école">
+  <meta name="descritpion" content="L-Yeah auto-école à Romont, Fribourg et alentours">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
   <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
@@ -13,19 +16,52 @@
   <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#2d3941">
   <title>Accueil &middot; L-YEAH</title>
 </head>
+
 <body>
   <div class="container">
     <header>
-      <h1 class="normal uppercase">Il te faut <br /><small>le</small> <big>permis?</big></h1>
-      <p class="left">Region Fribourg-Romont et alentours</p>
+      <img class="img-fluid logo" src="./img/L-YEAH-LOGO-NEG.png" alt="L-Yeah">
+      <p class="text-right caps">Region Fribourg-Romont et alentours</p>
     </header>
     <article>
-      <address>
-        <h2 class="normal">Henrique Freitas<h2>
-        <p class="normal">Moniteur auto-ecole</p>
-        <a class="normal" href="tel:+41792243709">079 224 37 09</a>
+      <address class="caps text-center">
+        <h2 class="font-weight-light">Henrique Freitas</h2>
+        <p class="font-weight-light">Moniteur auto-ecole</p>
+        <p>
+          <a class="font-weight-light" href="tel:+41792243709">079 224 37 09</a>
+        </p>
+        <p class="social">
+          <a id="facebook-link" href="https://www.facebook.com/lyeahautoecole/" class="fab fa-facebook"></a>
+          <a id="instagram-link" href="https://www.instagram.com/lyeah_autoecole" class="fab fa-instagram"></a>
+          <a id="whatsapp-link" href="https://wa.me/41792243709" class="fab fa-whatsapp"></a>
+        </p>
       </address>
     </article>
+    <br />
   </div>
 </body>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "School",
+    "url": "http://www.l-yeah.ch",
+    "name": "L-Yeah",
+    "founder": {
+      "@type": "Person",
+      "familyName": "Freitas",
+      "givenName" : "Henrique"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+41-79-224-37-09",
+      "contactType": "Moniteur"
+    },
+    "location": {
+      "@type": "Place",
+      "address": "Corminboeuf"
+    }
+  }
+</script>
+
 </html>

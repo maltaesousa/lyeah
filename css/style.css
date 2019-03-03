@@ -7,12 +7,21 @@ body {
   background-color: #2d3941;
   font-family: 'Anton', sans-serif;
   color: #ffffff;
+  font-size: 2em;
+}
+
+.logo {
+  max-height: 20em;
 }
 
 h1 {
-  font-size: 8em;
+  font-size: 4rem;
   font-style: normal;
   font-weight: 200;
+}
+
+small {
+  font-size: 2rem;
 }
 
 address {
@@ -24,10 +33,20 @@ a {
   text-decoration-line: none;
 }
 
-.normal {
-  font-weight: normal;
+.caps {
+  font-variant: small-caps;
+  padding-top: 1em;
 }
 
-.uppercase {
-  text-transform: uppercase;
+.social {
+  font-size: 1.5em;
+}
+
+a.fab {
+  padding: 0.2em;
+}
+
+a:hover {
+  color: #519cb6;
+  text-decoration: none;
 }
