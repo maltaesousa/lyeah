@@ -1,52 +1,20 @@
-@font-face {
-  font-family: Anton;
-  src: url(../fonts/Anton-Regular.ttf);
-}
-
 body {
   background-color: #2d3941;
-  font-family: 'Anton', sans-serif;
   color: #ffffff;
   font-size: 2em;
 }
 
-.logo {
-  max-height: 20em;
-}
-
-h1 {
-  font-size: 4rem;
-  font-style: normal;
-  font-weight: 200;
-}
-
-small {
-  font-size: 2rem;
-}
-
-address {
-  font-style: normal;
-}
-
 a {
-  color: #ffffff;
-  text-decoration-line: none;
-}
-
-.caps {
-  font-variant: small-caps;
-  padding-top: 1em;
-}
-
-.social {
-  font-size: 1.5em;
-}
-
-a.fab {
-  padding: 0.2em;
-}
-
-a:hover {
-  color: #519cb6;
   text-decoration: none;
+}
+
+.logo {
+  max-height: 2em;
+}
+
+.bg-1 {
+  background-image: url('https://placekitten.com/1920/1080');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  min-height: 100vh;
 }
