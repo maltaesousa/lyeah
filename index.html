@@ -6,13 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="descritpion" content="L-Yeah auto-école à Romont, Fribourg et alentours">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
@@ -21,11 +23,11 @@
   <title>Accueil &middot; L-YEAH</title>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="0" tabindex="0">
   <header class="site-header sticky-top">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img class="img-fluid logo" src="./img/android-chrome-512x512.png"
+        <a class="navbar-brand" href="#home"><img class="img-fluid logo" src="./img/android-chrome-512x512.png"
             alt="L-Yeah logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
           aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,14 +36,14 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" aria-current="page" href="#">Services</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Infos utiles</a>
+              <a class="nav-link" href="#infos">Infos utiles</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -50,19 +52,28 @@
   </header>
   <main>
 
-    <div class="position-relative overflow-hidden text-center min-vh-100 bg-1">
-      <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <h1 class="display-4 fw-normal">Punny headline</h1>
-        <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this
-          example based on Apple’s marketing pages.</p>
+    <div class="position-relative overflow-hidden text-center min-vh-100 bg-1" id="home">
+      <div class="video-background">
+        <div class="video-foreground">
+          <iframe id="player" type="text/html" width="100%" height="100%"
+            src="https://www.youtube.com/embed/Se0KvNa5j1I?playlist=Se0KvNa5j1I&loop=1&autoplay=1&mute=1"
+            frameborder="0"></iframe>
+        </div>
+      </div>
+      <div class="col-md-6 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 fw-normal">Hey salut, c'est Henrique!</h1>
+        <p class="lead fw-normal">Avec moi tu peux t'entraîner à la théorie, suivre les cours de premiers secours et de sensibilisation et passer ton permis B ou BE dans le canton de Fribourg. Que tu sois un débutant ou un conducteur possédant déjà le permis et qui souhaiterait faire un perfectionnement.</p>
+        <p class="lead fw-normal">Je peux également te donner des leçons si tu es en situation de handicap grâce aux véhicules de la fondation Cerebral.</p>
+        <p class="lead fw-normal">N'hésite pas à me contacter pour plus d'infos et n'oublie pas: On est tou·te·s passé·e·s par là!</p>
       </div>
       <div class="product-device shadow-sm d-none d-md-block"></div>
       <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
     </div>
 
-    <article>
+    <hr id="services">
+    <article class="my-10">
       <div class="container">
-        <div class="row my-5">
+        <div class="row">
           <div class="col-lg-3 text-center">
             <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
               role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -70,7 +81,7 @@
               <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
                 dy=".3em">140x140</text>
             </svg>
-            <h2>Auto-école</h2>
+            <h2 class="my-5">Auto-école</h2>
           </div><!-- /.col-lg-3 -->
           <div class="col-lg-3 text-center">
             <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +90,7 @@
               <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
                 dy=".3em">140x140</text>
             </svg>
-            <h2>Sensibilisation</h2>
+            <h2 class="my-5">Sensibilisation</h2>
 
           </div><!-- /.col-lg-3 -->
           <div class="col-lg-3 text-center">
@@ -89,7 +100,7 @@
               <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
                 dy=".3em">140x140</text>
             </svg>
-            <h2>Premiers secours</h2>
+            <h2 class="my-5">Premiers secours</h2>
           </div><!-- /.col-lg-3 -->
 
           <div class="col-lg-3 text-center">
@@ -99,11 +110,13 @@
               <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
                 dy=".3em">140x140</text>
             </svg>
-            <h2>Cours théorie</h2>
+            <h2 class="my-5">Cours théorie</h2>
           </div><!-- /.col-lg-3 -->
         </div>
       </div>
-
+    </article>
+    <hr id="infos">
+    <article>
       <div class="row py-5">
         <div class="col-md-6">
           <img class="img-fluid" src="http://placekitten.com/800/600" alt="Voitures">
@@ -132,50 +145,13 @@
       </div>
 
       <div class="container">
-        <h2>Be a boss</h2>
+        <h2 class="display-5">#likeaboss</h2>
         <div class="row">
-          <div class="col-md-12 heroSlider-fixed">
-            <div class="overlay">
-            </div>
-            <!-- Slider -->
-            <div class="slider responsive">
-              <div>
-                <img src="http://placehold.it/200x150" alt="" />
-              </div>
-              <div>
-                <img src="http://placehold.it/200x150" alt="" />
-              </div>
-              <div>
-                <img src="http://placehold.it/200x150" alt="" />
-              </div>
-              <div>
-                <img src="http://placehold.it/200x150" alt="" />
-              </div>
-              <div>
-                <img src="http://placehold.it/200x150" alt="" />
-              </div>
-              <div>
-                <img src="http://placehold.it/200x150" alt="" />
-              </div>
-              <div>
-                <img src="http://placehold.it/200x150" alt="" />
-              </div>
-              <div>
-                <img src="http://placehold.it/200x150" alt="" />
-              </div>
-            </div>
-            <!-- control arrows -->
-            <div class="prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            </div>
-            <div class="next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            </div>
-
-          </div>
+          <div id="instagram-feed-demo" class="instagram_feed"></div>
         </div>
       </div>
-
+    </article>
+    <article id="contact">
       <div class="row py-5">
         <div class="col-md-6">
           <address class="caps text-center">
@@ -188,6 +164,7 @@
               <a id="facebook-link" href="https://www.facebook.com/lyeahautoecole/" class="fab fa-facebook"></a>
               <a id="instagram-link" href="https://www.instagram.com/lyeah_autoecole" class="fab fa-instagram"></a>
               <a id="whatsapp-link" href="https://wa.me/41792243709" class="fab fa-whatsapp"></a>
+              <a id="telegram-link" href="https://telegram.me/l_yeah" class="fab fa-telegram"></a>
             </p>
           </address>
         </div>
@@ -210,9 +187,11 @@
   <br />
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/jquery.instagramFeed.min.js"></script>
 
 
 <script type="application/ld+json">
@@ -238,40 +217,49 @@ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="ano
   }
 </script>
 <script>
-  $('.responsive').slick({
-    dots: true,
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+  $(window).on('load', function () {
+    $.instagramFeed({
+      'username': 'lyeah_autoecole',
+      'container': "#instagram-feed-demo",
+      'display_profile': false,
+      'display_biography': false,
+      'display_igtv': false,
+      'display_gallery': true,
+      'tag': 'likeaboss'
+    });
   });
 </script>
+<script>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '720',
+      width: '1280',
+      videoId: 'Se0KvNa5j1I',
+      playerVars: {
+        autoplay: 1,
+        disablekb: 1,
+        controls: 0,        // Hide pause/play buttons in player
+        showinfo: 0,        // Hide the video title
+        modestbranding: 1,  // Hide the Youtube Logo
+        loop: 1,            // Run the video in a loop
+        fs: 0,              // Hide the full screen button
+        autohide: 0,         // Hide video controls when playing
+        rel: 0,
+      },
+      events: {
+        onReady: function (e) {
+          e.target.mute();
+        }
+      }
+    });
+  }
+</script>
+
 
 </html>
