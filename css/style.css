@@ -149,3 +149,7 @@ svg:not(:root) {
 .big-icons {
   font-size: 2rem;
 }
+
+.instagram_feed a {
+  height: auto !important;
+}
