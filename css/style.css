@@ -16,10 +16,14 @@ a {
   padding-bottom: 10em;
 }
 
+.py-8 {
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
+
 .rounded-img {
   border-radius: 50%;
-  max-width: 100%;
-  max-height: 100%;
+  max-height: 15rem;
 }
 
 ul {
@@ -145,9 +149,25 @@ svg:not(:root) {
   background-image: url("../img/fribourg.jpg");
 }
 
+.bg-img {
+  background-color: rgba(0,0,0,0.4);
+}
+
 /* PART CONTACT */
 .big-icons {
   font-size: 2rem;
+}
+
+.svg-icon {
+  display: inline-block;
+  height: 1em;
+  fill: currentColor;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  position: relative;
+  bottom: 0.1em;
 }
 
 .instagram_feed a {
