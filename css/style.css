@@ -1,9 +1,17 @@
 body {
   background-color: #2d3941;
   color: #ffffff;
-  font-family: "Fira Sans", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.2em;
   overflow-x: hidden;
+}
+
+.bg-dark {
+  background-color: #2d3941 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 a {
@@ -38,12 +46,30 @@ h2.uppercase {
 
 /* HEADER */
 
-.logo {
-  max-height: 2em;
+#mainNav #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#mainNav {
+  transition: 0.4s;
 }
 
 nav.navbar {
   text-transform: uppercase;
+}
+
+.logo-lg {
+  max-height: 8em;
+}
+
+.logo-sm {
+  max-height: 2em;
+}
+
+.logo-mobile {
+  display: none;
 }
 
 /* VIDEO HEADER*/
@@ -73,7 +99,6 @@ nav.navbar {
 }
 
 #player {
-  margin-top: 3.5rem;
   top: 0;
   position: absolute;
   width: 100%;
@@ -87,34 +112,10 @@ section, .bg-services {
   position: relative;
 }
 
-/* --- */
-
-.colorFillContainer {
-  bottom: 0px;
+.video-overlay {
+  width: 100%;
   position: absolute;
-  width: 100%;
-}
-
-#colorFill {
-  z-Index: 50;
-  height: 85px;
-  bottom: 0;
-  width: 100%;
-}
-
-#colorMask {
-  z-Index: 51;
-  height: 60px;
-  bottom: 0px;
-}
-
-#colorMask, .colorFill {
-  position: absolute;
-  width: 100%;
-}
-
-svg:not(:root) {
-  overflow: hidden;
+  bottom: 4rem;
 }
 
 .top-left, .top-right {
@@ -123,7 +124,32 @@ svg:not(:root) {
   z-index: 300;
 }
 
-/* PART 02*/
+/*---*/
+
+.overlaying-svg {
+  width: 100%;
+  position: absolute;
+  top: -100px;
+}
+
+.potits-carres {
+  height: 200px;
+  position: relative;
+  z-index: 1010;
+}
+
+.inverse-svg {
+  -moz-transform:    scaleX(-1);
+  -o-transform:      scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+/* PART SERVICES */
+
+.after-video-section {
+  margin-top: -0.45em;
+}
 
 .light-section {
   color: #2d3941;
@@ -139,8 +165,6 @@ svg:not(:root) {
   text-align: justify;
 }
 
-/* PART SERVICES */
-
 .bg-services {
   background-attachment: fixed;
   background-position: center;
@@ -150,10 +174,46 @@ svg:not(:root) {
 }
 
 .bg-img {
-  background-color: rgba(0,0,0,0.4);
+  height: 75vh;
+}
+
+/* PART 4-IMAGES */
+
+.img-legend-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: #008CBA;
+}
+
+.img-legend-container:hover .overlay,
+.img-legend-container:active .overlay {
+  opacity: .8;
+}
+
+.img-legend {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /* PART CONTACT */
+
 .big-icons {
   font-size: 2rem;
 }
@@ -172,4 +232,81 @@ svg:not(:root) {
 
 .instagram_feed a {
   height: auto !important;
+}
+
+@media (max-width: 768px) {
+  /* GENERAL */
+  .py-10 {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+  .py-8 {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+  .svg-services {
+    width: 256px;
+  }
+  .potits-carres {
+    height: 100px;
+  }
+  .overlaying-svg {
+    top: -50px;
+  }
+  /* VIDEO */
+  #player {
+    display: none;
+  }
+  .introVideoContainer {
+    display: none;
+  }
+  .videoContainer {
+    display: none;
+  }
+  .header-video {
+    height: unset;
+    max-height: unset;
+    position: inherit;
+  }
+  .video-overlay {
+    position: inherit;
+    padding-top: 1em;
+    padding-bottom: 2em;
+  }
+  .logo-sm, .logo-lg {
+    display: none;
+  }
+  .logo-mobile {
+    display: block;
+    margin: auto;
+    padding-top: 4em;
+    width: 80%;
+  }
+  .prez-title.text-right {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .svg-services {
+    width: 256px;
+  }
+}
+
+@media (min-width: 992px) {
+  .svg-services {
+    width: 256px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .svg-services {
+    width: 256px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .svg-services {
+    width: auto;
+  }
 }
