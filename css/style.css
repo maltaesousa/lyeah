@@ -46,8 +46,8 @@ h2.uppercase {
 
 /* HEADER */
 
-#mainNav #logo {
-  font-size: 35px;
+.navbar .img-fluid {
+  font-size: 2em;
   font-weight: bold;
   transition: 0.4s;
 }
@@ -62,14 +62,25 @@ nav.navbar {
 
 .logo-lg {
   max-height: 8em;
+  margin: 0 0.5em;
+  padding-right: 0.5em;
 }
 
 .logo-sm {
   max-height: 2em;
+  margin: 0 0.5em;
 }
 
 .logo-mobile {
   display: none;
+  padding-left: 0;
+}
+
+.image-invisible {
+  opacity: 0;
+}
+.nav-brand-invisible {
+  margin-right: 0 !important;
 }
 
 /* VIDEO HEADER*/
@@ -94,7 +105,7 @@ nav.navbar {
 
 .videoContainer {
   position: relative;
-  padding-top: 56.75%;
+  padding-top: 56.32%;
   overflow: hidden;
 }
 
@@ -236,6 +247,9 @@ section, .bg-services {
 
 @media (max-width: 768px) {
   /* GENERAL */
+  .hide-mobile {
+    display: none;
+  }
   .py-10 {
     padding-top: 5em;
     padding-bottom: 5em;
@@ -245,7 +259,7 @@ section, .bg-services {
     padding-bottom: 3em;
   }
   .svg-services {
-    width: 256px;
+    width: 200px;
   }
   .potits-carres {
     height: 100px;
@@ -284,6 +298,15 @@ section, .bg-services {
   }
   .prez-title.text-right {
     text-align: center !important;
+  }
+  .image-invisible {
+    display: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .image-invisible {
+    display: none;
   }
 }
 
