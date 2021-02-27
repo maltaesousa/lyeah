@@ -156,9 +156,9 @@
                     </div>
                   </div>
                   <div id="modalFooter" class="modal-footer">
-                    <div class="d-flex w-100 justify-content-between align-items-end">
+                    <div class="d-flex flex-wrap w-100 justify-content-center justify-content-sm-between align-items-end">
                       <div>
-                        <h2 id="reserver" class="reserver-footer">Réserver:</h2>
+                        <h2 id="reserver" class="reserver-footer mr-2">Réserver:</h2>
                       </div>
                       <div class="big-icons light-links">
                         <a id="whatsapp-link" href="https://wa.me/41792243709" class="fab fa-whatsapp"
@@ -650,7 +650,7 @@
           $('#reserver').text(`Réserver pour le ${$(e.currentTarget).attr("value")}:`);
         });
         $('#closeModalButton').on('click', () => {
-          $('#reserver').text(`Réserver: `);
+          $('#reserver').text(`Réserver:`);
         });
       });
   </script>
