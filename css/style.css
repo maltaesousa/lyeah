@@ -210,6 +210,10 @@ section, .bg-services, .bg-img {
   padding-top: 4em;
 }
 
+h2.reserver-footer {
+  line-height: 1;
+}
+
 /* PART 4-IMAGES */
 
 .img-legend-container {
