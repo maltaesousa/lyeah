@@ -334,6 +334,9 @@ section, .bg-services, .bg-img {
     max-height: 15rem;
     margin-top: 4em;
   }
+  .bg-services {
+    background-attachment: scroll;
+  }
 }
 
 @media (max-width: 992px) {

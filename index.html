@@ -30,8 +30,8 @@
         <img id="logo" class="img-fluid logo-lg" src="img/L-YEAH-LOGO-NEG.png" alt="L-Yeah logo">
       </a>
       <div class="container">
-        <div class="row">
-          <div class="big-icons d-block d-md-none mx-auto">
+        <div class="row mx-auto">
+          <div class="big-icons d-block d-md-none">
             <a id="whatsapp-link-mob" href="https://wa.me/41792243709" class="fab fa-whatsapp" target="_blank"></a>
             <a id="telegram-link-mob" href="https://telegram.me/l_yeah" class="fab fa-telegram" target="_blank"></a>
             <a id="signal-link-mob" href="sms:+41792243709" target="_blank">
@@ -62,6 +62,7 @@
               </svg>
             </a>
             <a href="tel:+41792243709" class="fa fa-phone" target="_blank"></a>
+            <a href="mailto:henrique@l-yeah.ch" class="fa fa-envelope" target="_blank"></a>
           </div>
           <div class="collapse navbar-collapse" id="navbarsMenu">
             <ul class="navbar-nav">
@@ -157,10 +158,6 @@
                   <div class="modal-footer">
                     <p>Réserver:</p>
                     <div class="big-icons light-links">
-                      <a id="facebook-link" href="https://www.facebook.com/lyeahautoecole/" class="fab fa-facebook"
-                        target="_blank"></a>
-                      <a id="instagram-link" href="https://www.instagram.com/lyeah_autoecole" class="fab fa-instagram"
-                        target="_blank"></a>
                       <a id="whatsapp-link" href="https://wa.me/41792243709" class="fab fa-whatsapp"
                         target="_blank"></a>
                       <a id="telegram-link" href="https://telegram.me/l_yeah" class="fab fa-telegram"
@@ -193,6 +190,8 @@
                           </g>
                         </svg>
                       </a>
+                      <a href="tel:+41792243709" class="fa fa-phone" target="_blank"></a>
+                      <a href="mailto:henrique@l-yeah.ch" class="fa fa-envelope" target="_blank"></a>
                     </div>
                   </div>
                 </div>
@@ -215,7 +214,7 @@
             <object class="svg-services" data="img/icon-theorie.svg" type="image/svg+xml"></object>
             <h6 class="mt-2 mb-0 text-center display-6">Cours théorie</h6>
             <p>
-              La théorie c'est pas ton truc? Je te donne volontiers un coup de main!<br>
+              La théorie c'est pas ton truc? Je te donne volontiers un coup de main!<br class="d-none d-xl-block">
               Je me déplace également à domicile dans la région de Fribourg et Romont.
             </p>
           </div><!-- /.col -->
@@ -230,7 +229,7 @@
         </div>
         <div class="row presentation">
           <div class="col-md-8">
-            <p class="">
+            <p>
               Les cours de théorie, de sensibilisation et de premiers secours sont donnés à la Rue de l’Eglise 75,
               1680
               Romont.
@@ -245,7 +244,7 @@
               <li>si tu veux connaître le nom de mes chats.</li>
             </ul>
             </p>
-            <p class="">Et n'oublie pas: On est tou·te·s passé·e·s par là!</p>
+            <p>Et n'oublie pas: On est tou·te·s passé·e·s par là!</p>
           </div>
           <div class="col-md-1"></div>
           <div class="col-md-3 text-center mb-5">
@@ -604,11 +603,18 @@
     fetch('https://lyeah-acce.restdb.io/rest/file-db', fetchOptions)
       .then(response => response.json())
       .then((coursesData) => {
-        coursesData.forEach((course) => {
+        console.log(coursesData);
+        coursesData.sort((a, b) => {
+          return a.date < b.date ? -1 : 1;
+        });
+        for (const course of coursesData) {
           const date_beg = new Date(course.date);
           const today = new Date();
           if ( date_beg >= today ) {
             const node = document.createElement("LI");
+            const rowNode = document.createElement("DIV");
+            const colNode1 = document.createElement("DIV");
+            const colNode2 = document.createElement("DIV");
             let date_end = new Date(course.date);
             date_end.setDate(date_end.getDate() + 3);
             const textnode1 = document.createTextNode(
@@ -617,20 +623,25 @@
               `au ${date_end.toLocaleDateString('fr-CH', dateOptions2)}`);
             const badgeNode = document.createElement("SPAN");
             const brNode = document.createElement("BR");
-            brNode.className = "d-block d-sm-none";
-            const badgeTextnode = document.createTextNode("19h30 à 21h30");
+            brNode.className = "d-block d-lg-none";
+            const badgeTextnode = document.createTextNode("de 19h30 à 21h30");
             badgeNode.className = "badge bg-secondary";
             badgeNode.appendChild(badgeTextnode);
-            node.appendChild(textnode1);
-            node.appendChild(brNode);
-            node.appendChild(textnode2);
-            node.appendChild(badgeNode);
-            node.className = "list-group-item d-flex justify-content-between align-items-center";
+            node.appendChild(rowNode);
+            rowNode.appendChild(colNode1);
+            rowNode.appendChild(colNode2);
+            colNode1.appendChild(textnode1);
+            colNode1.appendChild(brNode);
+            colNode1.appendChild(textnode2);
+            colNode2.appendChild(badgeNode);
+            node.className = "list-group-item";
+            rowNode.className = "row";
+            colNode1.className = "col-12 col-sm-8 text-center text-sm-left";
+            colNode2.className = "col-12 col-sm-4 text-center text-sm-right";
             coursesEl.appendChild(node);
           }
-        })
-      })
-
+        }
+      });
   </script>
 
 </body>
