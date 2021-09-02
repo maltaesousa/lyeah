@@ -180,6 +180,10 @@ section, .bg-services, .bg-img {
 
 /* PART SERVICES */
 
+a.color-link {
+  color: #005277;
+}
+
 .svg-services {
   width: 190px;
 }
