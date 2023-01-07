@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 44" id="potits-carres4" version="1.1">
+  <defs id="defs22" />
+  <style id="style2" type="text/css">
+              .st0 {
+                fill: url(#SVGID_1_);
+              }
+            </style>
+  <linearGradient gradientTransform="matrix(1,0,0,-1,-7.2374309,55.726892)" y2="33.923401" x2="134.86369" y1="33.923401" x1="7.2665" gradientUnits="userSpaceOnUse" id="SVGID_1_">
+    <stop id="stop4" style="stop-color:#0095B1" offset="0" />
+    <stop id="stop6" style="stop-color:#0082A0" offset="0.1132" />
+    <stop id="stop8" style="stop-color:#006D8E" offset="0.2766" />
+    <stop id="stop10" style="stop-color:#005E81" offset="0.459" />
+    <stop id="stop12" style="stop-color:#005579" offset="0.6736" />
+    <stop id="stop14" style="stop-color:#005277" offset="1" />
+  </linearGradient>
+  <path style="fill:url(#SVGID_1_)" id="path17" d="m 91.600001,28.165192 0.08,2.63 2.63,-0.08 -0.08,-2.63 z m -57.800001,1.83 0.08,2.63 2.63,-0.08 -0.08,-2.63 z m 28.62,-5.37 0.08,2.63 2.63,-0.08 -0.08,-2.63 z m 14.180001,-6.97 0.08,2.63 2.63,-0.08 -0.08,-2.63 z m -21.846724,-6.147843 0.08,2.63 2.63,-0.08 -0.08,-2.63 z M 15.8,8.3151918 l 0.08,2.6300002 2.63,-0.08 -0.08,-2.6300002 z m 24.39,8.6400002 0.08,2.63 2.63,-0.08 -0.08,-2.63 z m 36.180001,16.09 -0.08,-2.63 -2.63,0.08 0.08,2.63 z M 2,19.765192 l 0.31,10.78 10.78,-0.31 -0.31,-10.78 z m 48.2,7.98 0.17,5.97 5.97,-0.17 -0.17,-5.97 z m -19.29,-10.88 -5.3,0.15 0.15,5.3 5.3,-0.15 z m -13.75,15.04 0.15,5.3 5.3,-0.15 -0.15,-5.3 z" class="st0" />
+</svg>

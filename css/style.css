@@ -1,52 +1,366 @@
-@font-face {
-  font-family: Anton;
-  src: url(../fonts/Anton-Regular.ttf);
-}
-
 body {
   background-color: #2d3941;
-  font-family: 'Anton', sans-serif;
   color: #ffffff;
-  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  overflow-x: hidden;
 }
 
-.logo {
-  max-height: 20em;
+.bg-dark {
+  background-color: #2d3941 !important;
 }
 
-h1 {
-  font-size: 4rem;
-  font-style: normal;
-  font-weight: 200;
-}
-
-small {
-  font-size: 2rem;
-}
-
-address {
-  font-style: normal;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 a {
-  color: #ffffff;
-  text-decoration-line: none;
-}
-
-.caps {
-  font-variant: small-caps;
-  padding-top: 1em;
-}
-
-.social {
-  font-size: 1.5em;
-}
-
-a.fab {
-  padding: 0.2em;
-}
-
-a:hover {
-  color: #519cb6;
   text-decoration: none;
+  color: white;
+}
+
+a.nav-link:hover, a.more-link:hover {
+  color: #0095B1;
+}
+
+a.btn-outline-primary, button.btn-outline-primary {
+  color: #0095B1;
+  border-color: #0095B1;
+}
+
+a.btn-outline-primary:hover, button.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #005277;
+  border-color: #005277;
+}
+
+.py-10 {
+  padding-top: 10em;
+  padding-bottom: 10em;
+}
+
+.py-8 {
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
+
+.rounded-img {
+  border-radius: 50%;
+}
+
+ul.no-decoration {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h2.uppercase {
+  text-transform: uppercase;
+}
+
+/* HEADER */
+
+.navbar .img-fluid {
+  font-size: 2em;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#mainNav {
+  transition: 0.4s;
+}
+
+nav.navbar {
+  text-transform: uppercase;
+}
+
+.logo-lg {
+  max-height: 8em;
+  margin: 0 0.5em;
+  padding-right: 0.5em;
+}
+
+.logo-sm {
+  max-height: 2em;
+  margin: 0 0.5em;
+}
+
+.logo-mobile {
+  display: none;
+  padding-left: 0;
+}
+
+.image-invisible {
+  opacity: 0;
+}
+.nav-brand-invisible {
+  margin-right: 0 !important;
+}
+
+.light-links a {
+  color: #0095B1;
+}
+
+.light-links a:hover {
+  color: #005277;
+}
+
+/* VIDEO HEADER*/
+
+.header-video {
+  height: calc(100vw * 0.5625);
+  max-height: 95vh;
+  position: relative;
+}
+
+.introVideoContainer {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  backface-visibility: hidden;
+  height: inherit;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.videoContainer {
+  position: relative;
+  padding-top: 56.32%;
+  overflow: hidden;
+}
+
+#player {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  pointer-events: none;
+  z-index: -100;
+}
+
+section, .bg-services, .bg-img {
+  position: relative;
+}
+
+.video-overlay {
+  width: 100%;
+  position: absolute;
+  bottom: 4rem;
+}
+
+.top-left, .top-right {
+  position: absolute;
+  left: 0;
+  z-index: 300;
+}
+
+/*---*/
+
+.overlaying-svg {
+  width: 100%;
+  position: absolute;
+  top: -100px;
+}
+
+.potits-carres {
+  height: 200px;
+  position: relative;
+  z-index: 1010;
+}
+
+.inverse-svg {
+  -moz-transform:    scaleX(-1);
+  -o-transform:      scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+/* PART SERVICES */
+
+a.color-link {
+  color: #005277;
+}
+
+.svg-services {
+  width: 190px;
+}
+
+.after-video-section {
+  margin-top: -0.45em;
+}
+
+.light-section {
+  color: #2d3941;
+  background-color: white;
+  text-align: center;
+  text-align: justify;
+}
+
+.dark-section {
+  background-color: #2d3941;
+  color: white;
+  text-align: center;
+  text-align: justify;
+}
+
+.bg-services {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/fribourg.jpg");
+}
+
+.bg-img {
+  height: 75vh;
+}
+
+.presentation {
+  padding-top: 4em;
+}
+
+h2.reserver-footer {
+  line-height: 1;
+}
+
+/* PART 4-IMAGES */
+
+.img-legend-container {
+  position: relative;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: #0095B1;
+}
+
+.img-legend-container:hover .overlay,
+.img-legend-container:active .overlay {
+  opacity: .8;
+}
+
+.img-legend {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* INSTAGRAM */
+
+.instagram-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* PART CONTACT */
+
+.big-icons {
+  font-size: 2rem;
+}
+
+.svg-icon {
+  display: inline-block;
+  height: 1em;
+  fill: currentColor;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  position: relative;
+  bottom: 0.1em;
+}
+
+.instagram_feed a {
+  height: auto !important;
+}
+
+@media (max-width: 768px) {
+  /* GENERAL */
+  .hide-mobile {
+    display: none;
+  }
+  .py-10 {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+  .py-8 {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+  .potits-carres {
+    height: 100px;
+  }
+  .overlaying-svg {
+    top: -50px;
+  }
+  /* VIDEO */
+  #player {
+    display: none;
+  }
+  .introVideoContainer {
+    display: none;
+  }
+  .videoContainer {
+    display: none;
+  }
+  .header-video {
+    height: unset;
+    max-height: unset;
+    position: inherit;
+  }
+  .video-overlay {
+    position: inherit;
+    padding-top: 1em;
+    padding-bottom: 2em;
+  }
+  .logo-sm, .logo-lg {
+    display: none;
+  }
+  .logo-mobile {
+    display: block;
+    margin: auto;
+    padding-top: 4em;
+    width: 80%;
+  }
+  .prez-title.text-right {
+    text-align: center !important;
+  }
+  .image-invisible {
+    display: none !important;
+  }
+  .rounded-img {
+    max-height: 15rem;
+    margin-top: 4em;
+  }
+  .bg-services {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 992px) {
+  .image-invisible {
+    display: none;
+  }
+}
+
+button.btn-close {
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230095B1'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
 }
