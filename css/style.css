@@ -6,6 +6,10 @@ body {
   overflow-x: hidden;
 }
 
+.contact-right {
+  min-width: 5.7em;
+}
+
 .bg-dark {
   background-color: #2d3941 !important;
 }
