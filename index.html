@@ -97,13 +97,13 @@
     <section class="light-section after-video-section" id="services">
       <div class="overlaying-svg">
         <div class="mx-5">
-          <object class="potits-carres" data="img/potits-carres.svg" type="image/svg+xml"></object>
+          <img class="potits-carres" src="img/potits-carres.svg" alt="Séparation">
         </div>
       </div>
       <div class="container py-8">
         <div class="row row-cols-1 row-cols-xs-2">
           <div class="col-md pt-5 text-center">
-            <object class="svg-services" data="img/icon-auto-ecole.svg" type="image/svg+xml"></object>
+            <img class="svg-services" src="img/icon-auto-ecole.svg" alt="Auto-école">
             <h6 class="mt-2 mb-0 text-center display-6">Auto-école</h6>
             <p>
               Leçons d’auto-école (manuelle ou automatique) dans le canton de Fribourg.
@@ -111,16 +111,51 @@
             </p>
           </div><!-- /.col -->
           <div class="col-md pt-5 text-center">
-            <object class="svg-services" data="img/icon-moto-ecole-12h.svg" type="image/svg+xml"></object>
+            <img class="svg-services" src="img/icon-moto-ecole-12h.svg" alt="Moto-école">
             <h6 class="mt-2 mb-0 text-center display-6">Moto-école</h6>
             <p>
               12h de cours obligatoires, les cours ont lieu à Romont!
               Si tu ne dois faire que les 4h du bloc 3, contacte-moi par téléphone!
             </p>
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+              data-bs-target="#listMotoCourseModal">Choisis ton cours</button>
+            <!-- Modal 1 -->
+            <div class="modal fade" id="listMotoCourseModal" tabindex="-1" aria-labelledby="listMotoCourseModal"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="listMotoCourseModalTitle">Liste des cours moto</h5>
+                    <button id="closeModalMotoButton" type="button" class="btn-close" data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div id="moto-courses" class="list-group list-group-flush text-left moto-list">
+                    </div>
+                  </div>
+                  <div id="modalMotoFooter" class="modal-footer">
+                    <div
+                      class="d-flex flex-wrap w-100 justify-content-center justify-content-sm-between align-items-end">
+                      <div>
+                        <h2 id="moto-reserver" class="reserver-footer mr-2">Réserver:</h2>
+                      </div>
+                      <div class="big-icons light-links">
+                        <a id="moto-whatsapp-link" href="https://wa.me/41792243709" class="fab fa-whatsapp"
+                          target="_blank"></a>
+                        <a id="moto-telegram-link" href="https://telegram.me/l_yeah" class="fab fa-telegram"
+                          target="_blank"></a>
+                        <a href="tel:+41792243709" class="fa fa-phone" target="_blank"></a>
+                        <a href="mailto:henrique@l-yeah.ch" class="fa fa-envelope" target="_blank"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- modal -->
           </div><!-- /.col -->
 
           <div class="col-md pt-5 text-center">
-            <object class="svg-services" data="img/icon-sensi.svg" type="image/svg+xml"></object>
+            <img class="svg-services" src="img/icon-sensi.svg" alt="Sensibilisation">
             <h6 class="mt-2 mb-0 text-center display-6">Sensibilisation</h6>
             <p>
               Je donne deux sessions de cours par mois, du lundi au jeudi de 19h00 à 21h00.<br>
@@ -163,23 +198,25 @@
           </div><!-- /.col -->
 
           <div class="col-md pt-5 text-center">
-            <object class="svg-services" data="img/icon-l2.svg" type="image/svg+xml"></object>
+            <img class="svg-services" src="img/icon-l2.svg" alt="Deux-phases">
             <h6 class="mt-2 mb-0 text-center display-6">Deux-phases</h6>
             <p>
-              Tu as 12 mois, à partir de la réussite de ton examen pratique, pour effectuer ta journée de cours L2! Inscris-toi via le lien ci-dessous.
+              Tu as 12 mois, à partir de la réussite de ton examen pratique, pour effectuer ta journée de cours L2!
+              Inscris-toi via le lien ci-dessous.
             </p>
-            <a class="btn btn-outline-primary" href="https://www.l2romont.ch/cours-l2/cours-l2/calendrier-et-inscription"
-              target="_blank">Inscriptions au cours L2</a>
+            <a class="btn btn-outline-primary"
+              href="https://www.l2romont.ch/cours-l2/cours-l2/calendrier-et-inscription" target="_blank">Inscriptions au
+              cours L2</a>
           </div><!-- /.col -->
         </div>
       </div>
     </section>
-    
+
     <section id="more-services" class="dark-section">
       <div class="container py-8">
         <div class="row row-cols-1 row-cols-xs-2">
           <div class="col-md pt-5 text-center">
-            <object class="svg-services" data="img/icon-moto-initiation.svg" type="image/svg+xml"></object>
+            <img class="svg-services" src="img/icon-moto-initiation.svg" alt="Initiation moto">
             <h6 class="mt-2 mb-0 text-center display-6">Initiation moto</h6>
             <p>
               Tu souhaites commencer la moto mais tu ne sais pas si cela te plaira?
@@ -188,14 +225,14 @@
             </p>
           </div><!-- /.col -->
           <div class="col-md pt-5 text-center">
-            <object class="svg-services" data="img/icon-remorque.svg" type="image/svg+xml"></object>
+            <img class="svg-services" src="img/icon-remorque.svg" alt="Remorque">
             <h6 class="mt-2 mb-0 text-center display-6">Remorque</h6>
             <p>
               Leçons pratiques sur une piste sécurisée proche de la sortie d’autoroute Fribourg Nord.
             </p>
           </div><!-- /.col -->
           <div class="col-md pt-5 text-center mx-auto">
-            <object class="svg-services" data="img/icon-fri-drive-plus.svg" type="image/svg+xml"></object>
+            <img class="svg-services" src="img/icon-fri-drive-plus.svg" alt="FRI DRIVE plus">
             <h6 class="mt-2 mb-0 text-center display-6">FRI DRIVE plus</h6>
             <p>
               T'habites le canton de Fribourg et souhaites profiter d'un cours de perfectionnement à prix réduit?
@@ -208,7 +245,7 @@
         </div>
         <div class="row row-cols-1 row-cols-xs-2">
           <div class="col-md pt-5 text-center">
-            <object class="svg-services" data="img/icon-theorie.svg" type="image/svg+xml"></object>
+            <img class="svg-services" src="img/icon-theorie.svg" alt="Cours théorie">
             <h6 class="mt-2 mb-0 text-center display-6">Cours théorie</h6>
             <p>
               La théorie c'est pas ton truc? Je te donne volontiers un coup de main!<br class="d-none d-xl-block">
@@ -217,15 +254,16 @@
           </div><!-- /.col -->
 
           <div class="col-md pt-5 text-center mx-auto">
-            <object class="svg-services" data="img/icon-perfectionnement.svg" type="image/svg+xml"></object>
+            <img class="svg-services" src="img/icon-perfectionnement.svg" alt="Perfectionnement">
             <h6 class="mt-2 mb-0 text-center display-6">Perfectionnement</h6>
             <p>
-              Tu as déjà le permis de conduire mais tu aimerais t'améliorer ou te rassurer lors de ta conduite? Que ce soit pour la moto ou pour l'auto, contacte-moi tantôt!
+              Tu as déjà le permis de conduire mais tu aimerais t'améliorer ou te rassurer lors de ta conduite? Que ce
+              soit pour la moto ou pour l'auto, contacte-moi tantôt!
             </p>
           </div><!-- /.col -->
 
           <div class="col-md pt-5 text-center">
-            <object class="svg-services" data="img/icon-secours.svg" type="image/svg+xml"></object>
+            <img class="svg-services" src="img/icon-secours.svg" alt="Premiers secours">
             <h6 class="mt-2 mb-0 text-center display-6">Premiers secours</h6>
             <p>
               Communément appelés les cours samaritains, cette étape est obligatoire pour obtenir ton permis.<br>
@@ -269,15 +307,16 @@
       <div class="bg-img">
         <div class="overlaying-svg">
           <div class="mx-5 text-right">
-            <object class="potits-carres inverse-svg" data="img/potits-carres.svg" type="image/svg+xml"></object>
+            <img class="potits-carres inverse-svg" src="img/potits-carres.svg" alt="Séparation">
           </div>
         </div>
       </div>
     </div>
+
     <section id="infos">
       <div class="overlaying-svg">
         <div class="mx-5">
-          <object class="potits-carres" data="img/potits-carres.svg" type="image/svg+xml"></object>
+          <img class="potits-carres" src="img/potits-carres.svg" alt="Séparation">
         </div>
       </div>
       <div class="light-section py-8">
@@ -375,7 +414,7 @@
     <section class="dark-section pb-5">
       <div class="overlaying-svg">
         <div class="mx-5 text-right">
-          <object class="potits-carres inverse-svg" data="img/potits-carres.svg" type="image/svg+xml"></object>
+          <img class="potits-carres inverse-svg" src="img/potits-carres.svg" alt="Séparation">
         </div>
       </div>
       <div class="container pt-5">
@@ -557,6 +596,7 @@
   integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"
   integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script src="./js/csv.js"></script>
 
 <script type="application/ld+json">
   {
@@ -582,106 +622,125 @@
 </script>
 <script>
   // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-  document.addEventListener('DOMContentLoaded', () => {
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-      const logoEl = document.getElementById("logo");
-      const logoInv = document.getElementById("logo-invisible");
-      const mainNavEl = document.getElementById("mainNav");
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        if (logoEl.className !== 'img-fluid logo-sm') {
-          logoEl.className = "img-fluid logo-sm";
-          logoInv.className = "img-fluid logo-sm image-invisible";
-          mainNavEl.className += ' bg-dark';
-        }
-      } else {
-        logoEl.className = "img-fluid logo-lg";
-        logoInv.className = "img-fluid logo-lg image-invisible";
-        const newNavClass = mainNavEl.className.replace(' bg-dark', '');
-        mainNavEl.className = newNavClass;
+  function scrollFunction() {
+    const logoEl = document.getElementById("logo");
+    const logoInv = document.getElementById("logo-invisible");
+    const mainNavEl = document.getElementById("mainNav");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      if (logoEl.className !== 'img-fluid logo-sm') {
+        logoEl.className = "img-fluid logo-sm";
+        logoInv.className = "img-fluid logo-sm image-invisible";
+        mainNavEl.className += ' bg-dark';
       }
+    } else {
+      logoEl.className = "img-fluid logo-lg";
+      logoInv.className = "img-fluid logo-lg image-invisible";
+      const newNavClass = mainNavEl.className.replace(' bg-dark', '');
+      mainNavEl.className = newNavClass;
     }
+  }
 
+  function getDateSquareEl(date) {
+    return `
+    <div class="mx-2 d-flex flex-column moto-date">
+      <div class="fs-7 text-center fw-light lh-1">
+        ${date.toLocaleDateString('fr-CH', {weekday: 'long'}).toUpperCase()}
+      </div>
+      <div class="text-center fs-2 lh-1 fw-light">
+        ${date.toLocaleDateString('fr-CH', {day: 'numeric'})}</div>
+      <div class="fs-7 text-center fw-light lh-1">
+        ${date.toLocaleDateString('fr-CH', {month: 'long'}).toUpperCase()}
+      </div>
+    </div>`
+  }
+
+  function motoCourseClick(course) {
+    console.log(course)
+    document.getElementById('moto-reserver').innerText = `Réserver le cours ${course}:`
+  }
+
+  function prepareCourses() {
     const coursesEl = document.getElementById("courses");
-    const dbApiKey = "603292505ad3610fb5bb6486";
-    const dateOptions1 = { weekday: 'long', month: 'long', day: 'numeric' };
-    const dateOptions2 = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const coursesMotoEl = document.getElementById("moto-courses");
+    const dateOptions = { weekday: 'long', month: 'long', day: 'numeric' };
+    const today = new Date();
 
-    const dbApiHeaders = new Headers({
-      "content-type": "application/json",
-      "x-apikey": dbApiKey,
-      "cache-control": "no-cache"
+    CSV.fetch({ url: 'data/moto.csv' }).done((data) => {
+      data.records.forEach(element => {
+        let date_beg = new Date(element[0]);
+        let date_mid = new Date(element[1]);
+        let date_end = new Date(element[2]);
+        if (date_beg >= today) {
+          html = `<a href="#moto-reserver"
+              class="list-group-item list-group-item-action moto-action"
+              onclick="motoCourseClick('${element[3]}')">
+              <div class="row">
+                <div class="col-12 col-sm-2 d-flex align-items-center my-1">
+                  <h2 class="m-0 text-center text-sm-start w-100">${element[3]}</h2>
+                </div>
+                <div class="col">
+                  ${getDateSquareEl(date_beg)}
+                </div>
+                <div class="col">
+                  ${getDateSquareEl(date_mid)}
+                </div>
+                <div class="col">
+                  ${getDateSquareEl(date_end)}
+                </div>
+              </div>
+            </a>`
+        }
+        coursesMotoEl.innerHTML += html;
+      });
+      const contactLinks = document.getElementsByClassName('moto-action');
+      $('#closeModalButton').on('click', () => {
+        $('#moto-reserver').text(`Réserver:`);
+      });
     });
 
-    const fetchOptions = {
-      method: 'GET',
-      headers: dbApiHeaders,
-      mode: 'cors',
-      cache: 'default'
-    };
+    CSV.fetch({ url: 'data/sensi.csv' }).done((data) => {
+      data.records.forEach(element => {
+        const course = { date: element[0] }
+        let date_beg = new Date(course.date);
 
-    fetch('https://lyeah-acce.restdb.io/rest/file-db', fetchOptions)
-      .then(response => response.json())
-      .then((coursesData) => {
-        coursesData.sort((a, b) => {
-          return a.date < b.date ? -1 : 1;
-        });
-        for (const course of coursesData) {
-          let date_beg = new Date(course.date);
-          const today = new Date();
-          if (date_beg >= today) {
-            const node = document.createElement("A");
-            const rowNode = document.createElement("DIV");
-            const colNode1 = document.createElement("DIV");
-            const colNode2 = document.createElement("DIV");
-            let date_end = new Date(course.date);
-            // EXCEPTION A EFFACER
-            console.log(date_beg);
-            let special_date = false;
-            date_end.setDate(date_end.getDate() + 3);
-            if (date_beg.getTime() == (new Date('2023-04-10')).getTime()) {
-              special_date = true;
-              date_beg = new Date('2023-04-11');
-              date_end = new Date('2023-04-12');
-            }
-            const textnode1 = document.createTextNode(
-              `Du ${date_beg.toLocaleDateString('fr-CH', dateOptions1)} `);
-            const textnode2 = document.createTextNode(
-              `au ${date_end.toLocaleDateString('fr-CH', dateOptions2)}`);
-            const badgeNode = document.createElement("SPAN");
-            const brNode = document.createElement("BR");
-            brNode.className = "d-block d-lg-none";
-            let badgeTextnode = document.createTextNode("de 19h00 à 21h00");
-            if (special_date) {
-              badgeTextnode = document.createTextNode("");
-              badgeNode.innerHTML = "de <u>17h00</u> à 21h00";
-            }
-            badgeNode.className = "badge bg-secondary";
-            badgeNode.appendChild(badgeTextnode);
-            node.appendChild(rowNode);
-            rowNode.appendChild(colNode1);
-            rowNode.appendChild(colNode2);
-            colNode1.appendChild(textnode1);
-            colNode1.appendChild(brNode);
-            colNode1.appendChild(textnode2);
-            colNode2.appendChild(badgeNode);
-            node.className = "list-group-item list-group-item-action contact-action";
-            node.setAttribute("href", "#reserver");
-            node.setAttribute("value", date_beg.toLocaleDateString('fr-CH', dateOptions1));
-            rowNode.className = "row";
-            colNode1.className = "col-12 col-sm-8 text-center text-sm-left";
-            colNode2.className = "col-12 col-sm-4 text-center text-sm-right";
-            coursesEl.appendChild(node);
-          }
+        if (date_beg >= today) {
+          let date_end = new Date(course.date);
+          date_end.setDate(date_end.getDate() + 3);
+
+          html = `<a href="#reserver"
+              class="list-group-item list-group-item-action contact-action"
+              value="${date_beg.toLocaleDateString('fr-CH', dateOptions)}">
+              <div class="row">
+                <div class="col-12 col-sm-8 text-center text-sm-left">
+                  Du ${date_beg.toLocaleDateString('fr-CH', dateOptions)}
+                  <br class="d-block d-lg-none">
+                  au ${date_end.toLocaleDateString('fr-CH', dateOptions)}
+                </div>
+                <div class="col-12 col-sm-4 text-center text-sm-right">
+                  <span class="badge bg-secondary">de 19h00 à 21h00</span>
+                </div>
+              </div>
+            </a>`
         }
-        $('.contact-action').on('click', (e) => {
-          $('#reserver').text(`Réserver pour le ${$(e.currentTarget).attr("value")}:`);
-        });
+        coursesEl.innerHTML += html;
+        const contactLinks = document.getElementsByClassName('contact-action');
+
+        for (let a of contactLinks) {
+          a.addEventListener('click', (e) => {
+            console.log(e.target)
+            document.getElementById('reserver').innerText = `Réserver pour le ${e.target.value}:`
+          })
+        }
         $('#closeModalButton').on('click', () => {
           $('#reserver').text(`Réserver:`);
         });
       });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    window.onscroll = () => scrollFunction();
+    prepareCourses();
   });
 </script>
 

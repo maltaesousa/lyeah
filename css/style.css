@@ -230,6 +230,15 @@ h2.reserver-footer {
   line-height: 1;
 }
 
+.moto-list > a:hover {
+  background-color: #0095B1;
+  color: #fff;
+}
+
+.fs-7 {
+  font-size: 0.85rem;
+}
+
 /* PART 4-IMAGES */
 
 .img-legend-container {
@@ -356,6 +365,10 @@ h2.reserver-footer {
   }
   .bg-services {
     background-attachment: scroll;
+  }
+  .moto-action:nth-child(odd) {
+    background-color: #2d3941;
+    color: #fff;
   }
 }
 
