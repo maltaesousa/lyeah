@@ -649,7 +649,7 @@
       <div class="text-center fs-2 lh-1 fw-light">
         ${date.toLocaleDateString('fr-CH', { day: 'numeric' })}</div>
       <div class="fs-7 text-center fw-light lh-1">
-        ${date.toLocaleDateString('fr-CH', { month: 'long' }).toUpperCase()}
+        ${date.toLocaleDateString('fr-CH', { month: 'long' }).toUpperCase().replace('SEPTEMBRE', 'SEPT.')}
       </div>
     </div>`
   }
