@@ -109,6 +109,10 @@ nav.navbar {
   color: #005277;
 }
 
+.navbar-title {
+  color: white
+}
+
 /* VIDEO HEADER*/
 
 .header-video {
